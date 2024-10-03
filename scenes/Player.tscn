@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://coh4ejme32ehr"]
+
+[ext_resource type="Texture2D" uid="uid://du8j6pbpvay37" path="res://art/playerGrey_up1.png" id="1_jxja2"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_rc4w4"]
+[ext_resource type="Texture2D" uid="uid://bpfjpsfrqbw8m" path="res://art/playerGrey_up2.png" id="2_bavue"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ecd0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bavue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_jxja2")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbhe5"]
+size = Vector2(10.25, 7)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 2
+y_sort_enabled = true
+texture_filter = 1
+scale = Vector2(2, 2)
+collision_mask = 2
+script = ExtResource("1_rc4w4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_3ecd0")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-0.125, 3.5)
+shape = SubResource("RectangleShape2D_mbhe5")
+debug_color = Color(0.23708, 0.507598, 1, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+y_sort_enabled = true
+zoom = Vector2(2, 2)
+limit_left = 16
+limit_top = -32
+limit_right = 1056
+limit_bottom = 528

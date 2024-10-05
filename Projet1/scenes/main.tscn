@@ -8,4 +8,4 @@
 [node name="World" parent="." instance=ExtResource("2_sxeda")]
 
 [node name="Player2" parent="World" instance=ExtResource("1_knlmq")]
-position = Vector2(544, 528)
+position = Vector2(596, 320)

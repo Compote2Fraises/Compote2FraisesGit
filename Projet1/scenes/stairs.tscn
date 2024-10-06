@@ -18,6 +18,7 @@ position = Vector2(419, 303)
 texture = ExtResource("1_wrih1")
 
 [node name="Down" type="Area2D" parent="."]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
 position = Vector2(370.5, 230)

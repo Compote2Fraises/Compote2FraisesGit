@@ -38,6 +38,11 @@ MoveRight={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_31="Stairs Up"
+2d_physics/layer_32="Stairs Down"
+
 [rendering]
 
 2d/snap/snap_2d_transforms_to_pixel=true

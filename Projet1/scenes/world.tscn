@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bxafkiyipm3ka"]
+[gd_scene load_steps=23 format=4 uid="uid://bxafkiyipm3ka"]
 
 [ext_resource type="Texture2D" uid="uid://g05umu8sho60" path="res://art/Texture/TX Tileset Grass.png" id="2_0ehqc"]
 [ext_resource type="Texture2D" uid="uid://dq7wapgrwa62e" path="res://art/Texture/TX Tileset Stone Ground.png" id="2_swl6d"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bvutr83epbqwi" path="res://art/simple_tileset_32x32_version1.0/assets_basic.png" id="5_h60rh"]
 [ext_resource type="Texture2D" uid="uid://iikfb3fiifwm" path="res://art/Texture/TX Props.png" id="6_5nn64"]
 [ext_resource type="Texture2D" uid="uid://coouu0e0iv153" path="res://art/Texture/TX Struct.png" id="7_odi4b"]
+[ext_resource type="PackedScene" uid="uid://btxl0k0cojx67" path="res://scenes/stairs.tscn" id="8_vcih2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7cuhv"]
 texture = ExtResource("2_swl6d")
@@ -1398,8 +1399,8 @@ texture = ExtResource("6_5nn64")
 6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.66667, 16, 0, 16, 0, 5.33333, -2.66667, 5.33333)
 2:10/size_in_atlas = Vector2i(2, 4)
 2:10/0 = 0
-2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 26.6667, -10.6667, 16, -10.6667, -10.6667, -16, -16)
-2:10/0/physics_layer_0/polygon_1/points = PackedVector2Array(16, 26.6667, 10.6667, 16, 10.6667, -10.6667, 16, -16)
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 26.6667, 10.6667, 16, 10.6667, -5.33333, 16, -16)
+2:10/0/physics_layer_0/polygon_1/points = PackedVector2Array(-16, 26.6667, -10.6667, 16, -10.6667, -5.33333, -16, -16)
 
 [sub_resource type="TileSet" id="TileSet_y0ppu"]
 physics_layer_0/collision_layer = 1
@@ -1411,72 +1412,6 @@ texture = ExtResource("7_odi4b")
 
 [sub_resource type="TileSet" id="TileSet_n5rlf"]
 sources/0 = SubResource("TileSetAtlasSource_fctfd")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gibv7"]
-texture = ExtResource("7_odi4b")
-4:5/0 = 0
-4:5/0/y_sort_origin = -20
-4:4/0 = 0
-4:4/0/y_sort_origin = -20
-4:6/0 = 0
-4:6/0/y_sort_origin = -20
-4:7/0 = 0
-4:7/0/y_sort_origin = -20
-4:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 8, -8, 8)
-3:7/0 = 0
-3:7/0/y_sort_origin = -20
-3:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 8, -8, 8)
-3:6/0 = 0
-3:6/0/y_sort_origin = -20
-3:5/0 = 0
-3:5/0/y_sort_origin = -20
-3:4/0 = 0
-3:4/0/y_sort_origin = -20
-3:3/0 = 0
-3:3/0/y_sort_origin = -20
-3:2/0 = 0
-3:2/0/y_sort_origin = -20
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, -8, -8, -8)
-2:2/0 = 0
-2:2/0/y_sort_origin = -20
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, -8, -8, -8)
-2:3/0 = 0
-2:3/0/y_sort_origin = -20
-2:4/0 = 0
-2:4/0/y_sort_origin = -20
-2:5/0 = 0
-2:5/0/y_sort_origin = -20
-2:6/0 = 0
-2:6/0/y_sort_origin = -20
-2:7/0 = 0
-2:7/0/y_sort_origin = -20
-2:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 8, -8, 8)
-5:7/0 = 0
-5:7/0/y_sort_origin = -20
-5:7/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 8, -8, 8)
-5:6/0 = 0
-5:6/0/y_sort_origin = -20
-5:5/0 = 0
-5:5/0/y_sort_origin = -20
-5:4/0 = 0
-5:4/0/y_sort_origin = -20
-5:3/0 = 0
-5:3/0/y_sort_origin = -20
-4:3/0 = 0
-4:3/0/y_sort_origin = -20
-5:2/0 = 0
-5:2/0/y_sort_origin = -20
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, -8, -8, -8)
-4:2/0 = 0
-4:2/0/y_sort_origin = -20
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, -8, -8, -8)
-
-[sub_resource type="TileSet" id="TileSet_sw5fe"]
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
-physics_layer_1/collision_layer = 2
-physics_layer_1/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_gibv7")
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
@@ -1517,15 +1452,14 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAbAAcAAAACAAoAAAAXAAgAAAAGAAoAAAAeAA4AAAAWABAAAAAhAAcAAAASABMAAAAjAAcAAAASABMAAAAnAAcAAAASABMAAAAnAAUAAAASABMAAAAhAAMAAAASABMAAAA=")
 tile_set = SubResource("TileSet_y0ppu")
 
-[node name="Stairs" type="TileMapLayer" parent="Etage 1"]
+[node name="Bridge and Tunnel" type="TileMapLayer" parent="Etage 1"]
 z_index = 2
 y_sort_enabled = true
 texture_filter = 1
 tile_set = SubResource("TileSet_n5rlf")
 
-[node name="Bridge and Tunnel" type="TileMapLayer" parent="Etage 1"]
-z_index = 2
-y_sort_enabled = true
-texture_filter = 1
-tile_map_data = PackedByteArray("AAA8ABQAAAACAAIAAAA8ABUAAAACAAMAAAA8ABYAAAACAAQAAAA8ABcAAAACAAUAAAA8ABgAAAACAAYAAAA8ABkAAAACAAcAAAA9ABQAAAADAAIAAAA9ABUAAAADAAMAAAA9ABYAAAADAAQAAAA9ABcAAAADAAUAAAA9ABgAAAADAAYAAAA9ABkAAAADAAcAAAA+ABQAAAAEAAIAAAA+ABUAAAAEAAMAAAA+ABYAAAAEAAQAAAA+ABcAAAAEAAUAAAA+ABgAAAAEAAYAAAA+ABkAAAAEAAcAAAA/ABQAAAAFAAIAAAA/ABUAAAAFAAMAAAA/ABYAAAAFAAQAAAA/ABcAAAAFAAUAAAA/ABgAAAAFAAYAAAA/ABkAAAAFAAcAAAA=")
-tile_set = SubResource("TileSet_sw5fe")
+[node name="Stairs" parent="Etage 1" instance=ExtResource("8_vcih2")]
+position = Vector2(-237, 271)
+
+[node name="Stairs2" parent="Etage 1" instance=ExtResource("8_vcih2")]
+position = Vector2(-114, 369)

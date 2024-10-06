@@ -10,25 +10,30 @@ size = Vector2(63, 10)
 size = Vector2(63, 10)
 
 [node name="Stairs" type="Node2D"]
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(1, 1)
 script = ExtResource("1_vd5dv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
-position = Vector2(419, 303)
+position = Vector2(48, 145)
 texture = ExtResource("1_wrih1")
 
 [node name="Down" type="Area2D" parent="."]
+position = Vector2(0, 72)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
-position = Vector2(370.5, 230)
 shape = SubResource("RectangleShape2D_2isso")
 
 [node name="Up" type="Area2D" parent="."]
+position = Vector2(0, -1)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
-position = Vector2(370.5, 158)
 shape = SubResource("RectangleShape2D_5vygn")
 
 [connection signal="body_entered" from="Down" to="." method="_on_down_body_entered"]

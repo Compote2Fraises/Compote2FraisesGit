@@ -22,10 +22,11 @@ animations = [{
 size = Vector2(10.25, 7.5)
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 2
 y_sort_enabled = true
 texture_filter = 1
 scale = Vector2(2, 2)
+collision_layer = 3
+collision_mask = 2
 script = ExtResource("1_rc4w4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

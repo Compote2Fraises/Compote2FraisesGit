@@ -9,11 +9,11 @@ func _ready() -> void:
 	$"Walls 1".z_index = Level+1
 	$Nature.z_index = Level+1
 	$Props.z_index = Level+1
-#prout
+
 	print("--- Etage n°",Level," ---")
-	$"Walls 1".tile_set.set_physics_layer_collision_layer(0,Level+1 | Level+2)
+	$"Walls 1".tile_set.set_physics_layer_collision_layer(0,Level | Level+1)
 	print("Walls 1: Layer n°",$"Walls 1".z_index,"/ Physics: ",$"Walls 1".tile_set.get_physics_layer_collision_layer(0))
-	$Props.tile_set.set_physics_layer_collision_layer(0,Level+1)
+	$Props.tile_set.set_physics_layer_collision_layer(0,Level)
 	print("Props: Layer n°",$Props.z_index,"/ Physics: ",$"Props".tile_set.get_physics_layer_collision_layer(0))
-	$Nature.tile_set.set_physics_layer_collision_layer(0,Level+1)
+	$Nature.tile_set.set_physics_layer_collision_layer(0,Level)
 	print("Nature: Layer n°",$Props.z_index,"/ Physics: ",$"Nature".tile_set.get_physics_layer_collision_layer(0))

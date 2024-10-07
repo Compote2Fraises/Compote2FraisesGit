@@ -27,8 +27,9 @@ Nous avons donc le numero de l'étage nous permettant de poser nos escaliers n'i
 func _on_up_body_entered(body):
 	if body.name == "Player":
 		body.collision_mask = int(get_parent().get_parent().name.split(" ")[1]) + 1 # mask joueur = etage de l'escalier + 1
-
+		print(int(get_parent().get_parent().name.split(" ")[1]) + 1)
 
 func _on_down_body_entered(body):
 	if body.name == "Player":
 		body.collision_mask = int(get_parent().get_parent().name.split(" ")[1]) # mask joueur = etage de l'escalier
+		print(int(get_parent().get_parent().name.split(" ")[1]))

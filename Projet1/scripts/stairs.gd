@@ -23,15 +23,19 @@ int(toutes_les_commandes_precedentes):
 	
 Nous avons donc le numero de l'étage nous permettant de poser nos escaliers n'importe ou tout en restant fonctionnel simplement en les rangeant correctement dans l'arbre
 """
+var lvl = 0
+
+func _ready() -> void:
+	lvl = get_parent().get_parent().Level
 
 func _on_up_body_entered(body):
-	if body.name == "Player":
-		body.collision_mask = int(get_parent().get_parent().Level) + 1 # mask joueur = etage de l'escalier + 1
-		body.z_index = int(get_parent().get_parent().Level + 2)
-		print("Etage Supérieur")
+	if body.name == "Player" and body.z_index == lvl+1:
+		body.collision_mask = int(lvl) + 1 # mask joueur = etage de l'escalier + 1
+		body.z_index = int(lvl + 2)
+		print("Etage Supérieur : ", lvl+1)
 
 func _on_down_body_entered(body):
-	if body.name == "Player":
-		body.collision_mask = int(get_parent().get_parent().Level) # mask joueur = etage de l'escalier
-		body.z_index = int(get_parent().get_parent().Level+1)
-		print("Etage Inférieur")
+	if body.name == "Player" and body.z_index == lvl+2:
+		body.collision_mask = int(lvl) # mask joueur = etage de l'escalier
+		body.z_index = int(lvl+1)
+		print("Etage Inférieur : ", lvl)

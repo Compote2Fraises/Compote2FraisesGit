@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmykmj5uj8h5f"]
+
+[ext_resource type="Script" path="res://bridge_and_tunnel.gd" id="1_sbfiy"]
+[ext_resource type="Texture2D" uid="uid://dggc41ux4gfqj" path="res://art/Texture/Pont&tunnel.png" id="2_cxchu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m12kr"]
+size = Vector2(64, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps6xo"]
+
+[node name="Bridge and tunnel" type="Node2D"]
+script = ExtResource("1_sbfiy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -1)
+texture = ExtResource("2_cxchu")
+
+[node name="Zone tunnel" type="Area2D" parent="."]
+position = Vector2(17, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zone tunnel"]
+position = Vector2(0, -6.5)
+shape = SubResource("RectangleShape2D_m12kr")
+
+[node name="Mur invisible 1" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mur invisible 1"]
+shape = SubResource("RectangleShape2D_ps6xo")
+
+[node name="Mur invisible 2" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mur invisible 2"]
+shape = SubResource("RectangleShape2D_ps6xo")

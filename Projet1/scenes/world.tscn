@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/etage.gd" id="1_tkgij"]
 [ext_resource type="Texture2D" uid="uid://g05umu8sho60" path="res://art/Texture/TX Tileset Grass.png" id="2_0ehqc"]
-[ext_resource type="PackedScene" path="res://scenes/stairs.tscn" id="2_4r86m"]
+[ext_resource type="PackedScene" uid="uid://btxl0k0cojx67" path="res://scenes/stairs.tscn" id="2_4r86m"]
 [ext_resource type="Texture2D" uid="uid://dq7wapgrwa62e" path="res://art/Texture/TX Tileset Stone Ground.png" id="2_swl6d"]
 [ext_resource type="Texture2D" uid="uid://bh7u4vtxo2pgn" path="res://art/simple_tileset_32x32_version1.0/tilesheet_basic.png" id="3_nmx4w"]
 [ext_resource type="Texture2D" uid="uid://bu6quf7qmqx02" path="res://art/Texture/TX Tileset Wall.png" id="4_rtbfk"]

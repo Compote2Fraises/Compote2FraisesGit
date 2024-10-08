@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://btxl0k0cojx67"]
 
-[ext_resource type="Script" path="res://stairs.gd" id="1_vd5dv"]
+[ext_resource type="Script" path="res://scripts/stairs.gd" id="1_vd5dv"]
 [ext_resource type="Texture2D" uid="uid://biherdnwivnpi" path="res://art/Texture/TX Stairs.png" id="1_wrih1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2isso"]

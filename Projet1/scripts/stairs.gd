@@ -28,12 +28,10 @@ func _on_up_body_entered(body):
 	if body.name == "Player":
 		body.collision_mask = int(get_parent().get_parent().Level) + 1 # mask joueur = etage de l'escalier + 1
 		body.z_index = int(get_parent().get_parent().Level + 2)
-		print(int(get_parent().get_parent().Level) + 2)
-		print(body.z_index,body.collision_mask)
+		print("Etage Supérieur")
 
 func _on_down_body_entered(body):
 	if body.name == "Player":
 		body.collision_mask = int(get_parent().get_parent().Level) # mask joueur = etage de l'escalier
 		body.z_index = int(get_parent().get_parent().Level+1)
-		print(int(get_parent().get_parent().Level+1))
-		print(body.z_index,body.collision_mask)
+		print("Etage Inférieur")

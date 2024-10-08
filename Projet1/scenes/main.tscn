@@ -10,4 +10,4 @@ z_index = 1
 
 [node name="Player" parent="World" instance=ExtResource("1_knlmq")]
 z_index = 2
-position = Vector2(488, 222)
+position = Vector2(488, 358)

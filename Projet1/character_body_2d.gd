@@ -19,6 +19,8 @@ func _process(delta):
 		velocity.x -= 1
 	if Input.is_action_pressed("MoveRight"):
 		velocity.x += 1
+	if Input.is_action_just_released("info"):
+		print("Z index : ", z_index, " | Collision mask : ", collision_mask)
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed

@@ -12,11 +12,11 @@ func _ready() -> void:
 	$Props.z_index = Level*3 + 2
 
 	print("--- Etage n°",Level," ---")
-	$"Walls 1".tile_set.set_physics_layer_collision_layer(0,Level+1)
+	$"Walls 1".tile_set.set_physics_layer_collision_layer(0,2**Level)
 	print("Walls 1: Layer n°",$"Walls 1".z_index,"/ Physics: ",$"Walls 1".tile_set.get_physics_layer_collision_layer(0))
-	$"Border".tile_set.set_physics_layer_collision_layer(0,Level+1)
+	$"Border".tile_set.set_physics_layer_collision_layer(0,2**Level)
 	print("Border: Layer n°",$"Border".z_index,"/ Physics: ",$"Border".tile_set.get_physics_layer_collision_layer(0))
-	$Props.tile_set.set_physics_layer_collision_layer(0,Level+1)
+	$Props.tile_set.set_physics_layer_collision_layer(0,2**Level)
 	print("Props: Layer n°",$Props.z_index,"/ Physics: ",$"Props".tile_set.get_physics_layer_collision_layer(0))
-	$Nature.tile_set.set_physics_layer_collision_layer(0,Level+1)
+	$Nature.tile_set.set_physics_layer_collision_layer(0,2**Level)
 	print("Nature: Layer n°",$Props.z_index,"/ Physics: ",$"Nature".tile_set.get_physics_layer_collision_layer(0))

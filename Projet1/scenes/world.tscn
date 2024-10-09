@@ -6384,9 +6384,6 @@ tile_set = SubResource("TileSet_2kk5o")
 z_index = 2
 position = Vector2(288, 236)
 
-[node name="Stairs2" parent="Etage 1/Stairs and Tunels" instance=ExtResource("2_4r86m")]
-position = Vector2(864, -132)
-
 [node name="Etage 2" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("1_tkgij")

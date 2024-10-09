@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu765sjnmd3f6"]
+[gd_scene load_steps=6 format=3 uid="uid://bu765sjnmd3f6"]
 
 [ext_resource type="PackedScene" uid="uid://coh4ejme32ehr" path="res://scenes/Player.tscn" id="1_knlmq"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_omxjf"]
 [ext_resource type="PackedScene" uid="uid://bxafkiyipm3ka" path="res://scenes/world.tscn" id="2_sxeda"]
+[ext_resource type="PackedScene" uid="uid://ch0m5djgbajba" path="res://scenes/inventory_gui.tscn" id="3_t6x75"]
+[ext_resource type="Script" path="res://scenes/canvas_layer.gd" id="3_wquhp"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_omxjf")
 
 [node name="World" parent="." instance=ExtResource("2_sxeda")]
 z_index = 1
@@ -11,3 +15,14 @@ z_index = 1
 [node name="Player" parent="World" instance=ExtResource("1_knlmq")]
 z_index = 2
 position = Vector2(488, 358)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("3_wquhp")
+
+[node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("3_t6x75")]
+offset_top = -168.5
+offset_bottom = 168.5
+
+[connection signal="closed" from="CanvasLayer/InventoryGUI" to="." method="_on_inventory_gui_closed"]
+[connection signal="opened" from="CanvasLayer/InventoryGUI" to="." method="_on_inventory_gui_opened"]

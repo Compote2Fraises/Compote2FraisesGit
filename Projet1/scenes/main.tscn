@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_omxjf"]
 [ext_resource type="PackedScene" uid="uid://bxafkiyipm3ka" path="res://scenes/world.tscn" id="2_sxeda"]
 [ext_resource type="PackedScene" uid="uid://ch0m5djgbajba" path="res://scenes/inventory_gui.tscn" id="3_t6x75"]
-[ext_resource type="Script" path="res://scenes/canvas_layer.gd" id="3_wquhp"]
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="3_wquhp"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_omxjf")

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 200
+@export var inventory: Inventory
 
 
 # Called when the node enters the scene tree for the first time.

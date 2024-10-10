@@ -17,9 +17,10 @@ func update():
 func open():
 	visible = true
 	isOpen = true
-	opened.emit()
+	get_tree().paused = true
 	
 func close():
 	visible = false
 	isOpen = false
-	closed.emit()
+	get_tree().paused = false
+	

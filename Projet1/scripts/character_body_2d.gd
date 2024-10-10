@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 200
+@export var currentLevel :int = 0
 @export var inventory: Inventory
 
 

@@ -27,6 +27,7 @@ position = Vector2(0, 72)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
+position = Vector2(0, -22)
 shape = SubResource("RectangleShape2D_2isso")
 
 [node name="Up" type="Area2D" parent="."]
@@ -34,6 +35,7 @@ position = Vector2(0, -1)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+position = Vector2(0, 27)
 shape = SubResource("RectangleShape2D_5vygn")
 
 [connection signal="body_entered" from="Down" to="." method="_on_down_body_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du8j6pbpvay37"
-path="res://.godot/imported/playerGrey_up1.png-6bd114d0a6beac91f48e3a7314d44564.ctex"
+uid="uid://b6h3xnnjqi4cl"
+path="res://.godot/imported/16x16-RPG-pack_0037_38-exp.png-7965a4c9e6c1fab22fd7d754b2553e4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/playerGrey_up1.png"
-dest_files=["res://.godot/imported/playerGrey_up1.png-6bd114d0a6beac91f48e3a7314d44564.ctex"]
+source_file="res://art/UI/Items/16x16-RPG-pack_0037_38-exp.png"
+dest_files=["res://.godot/imported/16x16-RPG-pack_0037_38-exp.png-7965a4c9e6c1fab22fd7d754b2553e4d.ctex"]
 
 [params]
 

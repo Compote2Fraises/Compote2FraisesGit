@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dorpraagghcdk"]
+
+[ext_resource type="Script" path="res://scripts/Inventory/InventoryItem.gd" id="1_s58g6"]
+[ext_resource type="Texture2D" uid="uid://twja3dq5dk7l" path="res://art/UI/Items/16x16-RPG-pack_0063_64-lamp.png" id="2_k8y3x"]
+
+[resource]
+script = ExtResource("1_s58g6")
+name = "Light"
+texture = ExtResource("2_k8y3x")

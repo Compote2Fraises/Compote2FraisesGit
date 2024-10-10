@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://chy2ya1rnbpap"]
+
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="1_16f5q"]
+[ext_resource type="PackedScene" uid="uid://ch0m5djgbajba" path="res://scenes/inventory_gui.tscn" id="2_ri27i"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("1_16f5q")
+
+[node name="InventoryGUI" parent="CanvasLayer" instance=ExtResource("2_ri27i")]
+offset_top = -168.5
+offset_bottom = 168.5

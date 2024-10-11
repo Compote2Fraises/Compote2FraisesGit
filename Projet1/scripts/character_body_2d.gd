@@ -40,4 +40,6 @@ func _process(delta):
 	
 	move_and_slide()
 	
-	
+func _on_hurt_box_area_area_entered(area):
+	if area.has_method("collect"):
+		area.collect()

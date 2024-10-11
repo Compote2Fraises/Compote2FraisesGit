@@ -4,6 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqu1d"]
 resource_local_to_scene = true
+size = Vector2(12, 11)
 
 [node name="Collectable" type="Area2D"]
 script = ExtResource("1_gcecp")

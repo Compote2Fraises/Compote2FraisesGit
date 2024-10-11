@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://bxafkiyipm3ka"]
+[gd_scene load_steps=57 format=4 uid="uid://bxafkiyipm3ka"]
 
 [ext_resource type="Script" path="res://scripts/etage.gd" id="1_tkgij"]
 [ext_resource type="Texture2D" uid="uid://g05umu8sho60" path="res://art/Texture/TX Tileset Grass.png" id="2_0ehqc"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bvutr83epbqwi" path="res://art/simple_tileset_32x32_version1.0/assets_basic.png" id="5_h60rh"]
 [ext_resource type="Texture2D" uid="uid://iikfb3fiifwm" path="res://art/Texture/TX Props.png" id="6_5nn64"]
 [ext_resource type="Texture2D" uid="uid://coouu0e0iv153" path="res://art/Texture/TX Struct.png" id="6_lo3tn"]
+[ext_resource type="PackedScene" uid="uid://doljwjgsf0bgl" path="res://Collectable/apple.tscn" id="10_r4vep"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn0dj"]
 texture = ExtResource("2_swl6d")
@@ -4154,10 +4155,15 @@ texture = ExtResource("4_rtbfk")
 11:21/0/y_sort_origin = -24
 11:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ukesh"]
+resource_name = "Collectable"
+scenes/1/scene = ExtResource("10_r4vep")
+
 [sub_resource type="TileSet" id="TileSet_bd7ds"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_3j5r2")
+sources/1 = SubResource("TileSetScenesCollectionSource_ukesh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_agr11"]
 texture = ExtResource("5_h60rh")
@@ -6407,6 +6413,7 @@ tile_set = SubResource("TileSet_3fjlv")
 [node name="Walls 1" type="TileMapLayer" parent="Etage 2"]
 y_sort_enabled = true
 texture_filter = 1
+tile_map_data = PackedByteArray("AAAiAAkAAQAAAAAAAQAnAAgAAQAAAAAAAQAdAAcAAQAAAAAAAQARAAcAAQAAAAAAAQAKAAQAAQAAAAAAAQAcAAsAAQAAAAAAAQA=")
 tile_set = SubResource("TileSet_bd7ds")
 
 [node name="Nature" type="TileMapLayer" parent="Etage 2"]

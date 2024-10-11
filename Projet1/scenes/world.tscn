@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 [gd_scene load_steps=57 format=4 uid="uid://bxafkiyipm3ka"]
-=======
-[gd_scene load_steps=56 format=4 uid="uid://bxafkiyipm3ka"]
->>>>>>> inventory
 
 [ext_resource type="Script" path="res://scripts/etage.gd" id="1_tkgij"]
 [ext_resource type="Texture2D" uid="uid://g05umu8sho60" path="res://art/Texture/TX Tileset Grass.png" id="2_0ehqc"]
@@ -13,11 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bvutr83epbqwi" path="res://art/simple_tileset_32x32_version1.0/assets_basic.png" id="5_h60rh"]
 [ext_resource type="Texture2D" uid="uid://iikfb3fiifwm" path="res://art/Texture/TX Props.png" id="6_5nn64"]
 [ext_resource type="Texture2D" uid="uid://coouu0e0iv153" path="res://art/Texture/TX Struct.png" id="6_lo3tn"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://doljwjgsf0bgl" path="res://Collectable/apple.tscn" id="10_r4vep"]
-=======
-[ext_resource type="PackedScene" uid="uid://ek0lia2svhmr" path="res://scenes/path.tscn" id="10_bmr6p"]
->>>>>>> inventory
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn0dj"]
 texture = ExtResource("2_swl6d")
@@ -6475,8 +6467,3 @@ tile_set = SubResource("TileSet_iylgg")
 y_sort_enabled = true
 texture_filter = 1
 tile_set = SubResource("TileSet_ijvgo")
-
-[node name="Path" parent="." instance=ExtResource("10_bmr6p")]
-position = Vector2(463, 279)
-To = -1
-isADoor = true

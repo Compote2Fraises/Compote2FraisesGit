@@ -28,7 +28,7 @@ func _process(delta):
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
-	
+		
 		#Annimation
 	if velocity.x !=0:
 		$AnimatedSprite2D.animation = "Walk"

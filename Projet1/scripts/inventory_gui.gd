@@ -4,7 +4,7 @@ signal closed
 
 var isOpen: bool = false
 
-@onready var inventory: Inventory = preload("res://PlayerInventory.tres")
+@onready var inventory: Inventory = preload("res://Inventory/PlayerInventory.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 
 func _ready():

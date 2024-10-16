@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://241c0hcbge1d"]
+
+[ext_resource type="Resource" uid="uid://cba730yqlwyi0" path="res://Inventory/Items/Apple.tres" id="1_ts3ak"]
+[ext_resource type="Resource" uid="uid://dpojuls8unr0v" path="res://Inventory/Items/Torch.tres" id="2_f8tnb"]
+[ext_resource type="Script" path="res://Inventory/inventory.gd" id="3_7sd6h"]
+
+[sub_resource type="GDScript" id="GDScript_b23l5"]
+script/source = "extends Resource
+
+
+class_name InventoryItem
+
+@export var name: String = \"\"
+@export var texture: Texture2D
+"
+
+[resource]
+script = ExtResource("3_7sd6h")
+items = Array[SubResource("GDScript_b23l5")]([ExtResource("1_ts3ak"), ExtResource("1_ts3ak"), ExtResource("2_f8tnb"), null, null, null, null, null, null, null])

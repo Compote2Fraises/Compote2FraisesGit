@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cba730yqlwyi0"]
+
+[ext_resource type="Texture2D" uid="uid://ct3k2mbypa4po" path="res://art/UI/Items/16x16-RPG-pack_0041_42-apple.png" id="1_csero"]
+
+[sub_resource type="GDScript" id="GDScript_b23l5"]
+script/source = "extends Resource
+
+
+class_name InventoryItem
+
+@export var name: String = \"\"
+@export var texture: Texture2D
+"
+
+[resource]
+script = SubResource("GDScript_b23l5")
+name = "Apple"
+texture = ExtResource("1_csero")

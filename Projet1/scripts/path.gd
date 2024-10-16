@@ -7,9 +7,6 @@ extends Node2D
 @export_group("Next Floor Properties")
 @export var numberOfLayers :int = 0 
 @export var playerRenderingLayer :int = 0
-@export_group("Path as a door")
-@export var isADoor :bool = false
-@export var targetScene :PackedScene 
 @export_group("Path as a tunnel")
 @export var isATunnel :bool = false
 @export var roof :TileMapLayer
@@ -24,9 +21,7 @@ func _on_trigger_body_entered(body: Node2D) -> void:
 		body.z_index = int((To)*numberOfLayers+playerRenderingLayer)
 		print("Passage de : ",From," à : ", To)
 		
-		if isADoor:
-			get_tree().change_scene_to_packed(targetScene)
-		elif isATunnel:
+		if isATunnel:
 			isInside = !isInside
 			if isInside:
 				print("IN")

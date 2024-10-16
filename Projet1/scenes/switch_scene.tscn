@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcalssxkx0jn8"]
+
+[ext_resource type="Script" path="res://scripts/switch_scene.gd" id="1_7iiao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ocv"]
+
+[node name="Switch Scene" type="Node2D"]
+script = ExtResource("1_7iiao")
+
+[node name="Trigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
+shape = SubResource("RectangleShape2D_x2ocv")
+debug_color = Color(1, 0.449809, 0.756454, 0.42)
+
+[connection signal="body_entered" from="Trigger" to="." method="_on_trigger_body_entered"]

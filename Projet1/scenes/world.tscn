@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://bxafkiyipm3ka"]
+[gd_scene load_steps=65 format=4 uid="uid://bxafkiyipm3ka"]
 
 [ext_resource type="Script" path="res://scripts/etage.gd" id="1_tkgij"]
 [ext_resource type="Texture2D" uid="uid://g05umu8sho60" path="res://art/Texture/TX Tileset Grass.png" id="2_0ehqc"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://doljwjgsf0bgl" path="res://Collectable/apple.tscn" id="10_r4vep"]
 [ext_resource type="PackedScene" uid="uid://b6ournk0pus1p" path="res://scenes/path.tscn" id="11_24f7q"]
 [ext_resource type="PackedScene" uid="uid://dh4md773tljqe" path="res://scenes/test_change_scene.tscn" id="13_gwxvk"]
+[ext_resource type="PackedScene" uid="uid://bcalssxkx0jn8" path="res://scenes/switch_scene.tscn" id="13_ihbow"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn0dj"]
 texture = ExtResource("2_swl6d")
@@ -5148,17 +5149,11 @@ tile_set = SubResource("TileSet_skofn")
 tile_map_data = PackedByteArray("AAAaAAkAAAADAAMAAAAaAAoAAAADAAMAAAAaAAsAAAADAAMAAAAaAAwAAAADAAMAAAAaAA0AAAADAAMAAAAbAAkAAAADAAMAAAAbAAoAAAADAAMAAAAbAAsAAAADAAMAAAAbAAwAAAADAAMAAAAbAA0AAAADAAMAAAAcAAkAAAADAAMAAAAcAAoAAAADAAMAAAAcAAsAAAADAAMAAAAcAAwAAAADAAMAAAAcAA0AAAADAAMAAAAdAAkAAAADAAMAAAAdAAoAAAADAAMAAAAdAAsAAAADAAMAAAAdAAwAAAADAAMAAAAdAA0AAAADAAMAAAAeAAkAAAADAAMAAAAeAAoAAAADAAMAAAAeAAsAAAADAAMAAAAeAAwAAAADAAMAAAAeAA0AAAADAAMAAAAfAAkAAAADAAMAAAAfAAoAAAADAAMAAAAfAAsAAAADAAMAAAAfAAwAAAADAAMAAAAfAA0AAAADAAMAAAAgAAkAAAADAAMAAAAgAAoAAAADAAMAAAAgAAsAAAADAAMAAAAgAAwAAAADAAMAAAAgAA0AAAADAAMAAAAhAAkAAAADAAMAAAAhAAoAAAADAAMAAAAhAAsAAAADAAMAAAAhAAwAAAADAAMAAAAhAA0AAAADAAMAAAAiAAkAAAADAAMAAAAiAAoAAAADAAMAAAAiAAsAAAADAAMAAAAiAAwAAAADAAMAAAAiAA0AAAADAAMAAAAjAAkAAAADAAMAAAAjAAoAAAADAAMAAAAjAAsAAAADAAMAAAAjAAwAAAADAAMAAAAjAA0AAAADAAMAAAAkAAkAAAADAAMAAAAkAAoAAAADAAMAAAAkAAsAAAADAAMAAAAkAAwAAAADAAMAAAAkAA0AAAADAAMAAAAlAAkAAAADAAMAAAAlAAoAAAADAAMAAAAlAAsAAAADAAMAAAAlAAwAAAADAAMAAAAlAA0AAAADAAMAAAA=")
 tile_set = SubResource("TileSet_uqqgn")
 
-[node name="Path" parent="Etage 2/Ground" node_paths=PackedStringArray("roof") instance=ExtResource("11_24f7q")]
+[node name="Path" parent="Etage 2/Ground" instance=ExtResource("11_24f7q")]
 position = Vector2(464, 240)
-renderingLayer = 2
-isATunnel = true
-roof = NodePath("../Roof")
 
-[node name="Path2" parent="Etage 2/Ground" node_paths=PackedStringArray("roof") instance=ExtResource("11_24f7q")]
+[node name="Path2" parent="Etage 2/Ground" instance=ExtResource("11_24f7q")]
 position = Vector2(606, 184)
-renderingLayer = 2
-isATunnel = true
-roof = NodePath("../Roof")
 
 [node name="Border" type="TileMapLayer" parent="Etage 2"]
 y_sort_enabled = true
@@ -5223,9 +5218,12 @@ y_sort_enabled = true
 texture_filter = 1
 tile_set = SubResource("TileSet_ijvgo")
 
-[node name="Path" parent="." instance=ExtResource("11_24f7q")]
-position = Vector2(135, 287)
-numberOfLayers = 1
-playerRenderingLayer = 2
-isADoor = true
+[node name="Switch Scene" parent="." instance=ExtResource("13_ihbow")]
+position = Vector2(145, 193)
+scale = Vector2(1.66993, 0.233617)
 targetScene = ExtResource("13_gwxvk")
+entry_position = Vector2(8, 8)
+zIndex = 5
+collisionLayer = Array[int]([3])
+collisionMask = Array[int]([1, 2, 4])
+speed = 50

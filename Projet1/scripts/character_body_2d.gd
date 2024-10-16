@@ -24,7 +24,7 @@ func _process(delta):
 	if Input.is_action_pressed("MoveRight"):
 		velocity.x += 1
 	if Input.is_action_just_released("info"):
-		print("Z index : ", z_index, " | Collision mask : ", collision_mask)
+		print("Z index : ", z_index, " | Collision Layer : ", collision_layer," | Collision mask : ", collision_mask)
 	
 #Animation du Joueur
 	if velocity.length() > 0:

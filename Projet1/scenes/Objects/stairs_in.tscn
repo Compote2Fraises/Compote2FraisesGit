@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1a18ympb8jjc"]
+
+[ext_resource type="Texture2D" uid="uid://dd3na2jahculv" path="res://art/Texture/TX Stairs_down.png" id="1_fgq60"]
+[ext_resource type="Script" path="res://scripts/stairs_in.gd" id="1_nb8dm"]
+[ext_resource type="PackedScene" uid="uid://b6ournk0pus1p" path="res://scenes/path.tscn" id="2_mbvsf"]
+
+[node name="stairs_in" type="Node2D"]
+position = Vector2(24, 0)
+script = ExtResource("1_nb8dm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fgq60")
+
+[node name="Path" parent="." instance=ExtResource("2_mbvsf")]
+position = Vector2(0, -8)
+scale = Vector2(2, 0.8)

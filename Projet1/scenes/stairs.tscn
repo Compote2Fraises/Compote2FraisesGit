@@ -19,7 +19,7 @@ script = ExtResource("1_vd5dv")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(48, 145)
+position = Vector2(-1, 36)
 texture = ExtResource("1_wrih1")
 
 [node name="Down" type="Area2D" parent="."]

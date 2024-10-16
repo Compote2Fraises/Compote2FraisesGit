@@ -5148,19 +5148,7 @@ tile_map_data = PackedByteArray("AAAaAAkAAAADAAMAAAAaAAoAAAADAAMAAAAaAAsAAAADAAM
 tile_set = SubResource("TileSet_uqqgn")
 
 [node name="Path" parent="Etage 2/Ground" node_paths=PackedStringArray("roof") instance=ExtResource("11_24f7q")]
-position = Vector2(464, 240)
-From = 0
-To = 0
-renderingLayer = 2
-numberOfLayers = 0
-playerRenderingLayer = 0
-isADoor = false
-isATunnel = true
-roof = NodePath("../Roof")
-isInside = false
-
-[node name="Path2" parent="Etage 2/Ground" node_paths=PackedStringArray("roof") instance=ExtResource("11_24f7q")]
-position = Vector2(606, 184)
+position = Vector2(464, 264)
 renderingLayer = 2
 isATunnel = true
 roof = NodePath("../Roof")

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 200
+@export var currentLevel :int = 0
 @export var inventory: Inventory
 
 
@@ -11,6 +12,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+#Deplacement du Joueur
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("MoveUp"):
 		velocity.y -= 1
@@ -23,13 +26,13 @@ func _process(delta):
 	if Input.is_action_just_released("info"):
 		print("Z index : ", z_index, " | Collision mask : ", collision_mask)
 	
+#Animation du Joueur
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
 		
-		#Annimation
 	if velocity.x !=0:
 		$AnimatedSprite2D.animation = "Walk"
 		$AnimatedSprite2D.flip_h = velocity.x < 0
@@ -39,7 +42,9 @@ func _process(delta):
 		$AnimatedSprite2D.animation="Up"
 	
 	move_and_slide()
-	
+
+#Detection des collisions
 func _on_hurt_box_area_area_entered(area):
 	if area.has_method("collect"):
 		area.collect()
+		

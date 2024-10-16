@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://bxafkiyipm3ka"]
+[gd_scene load_steps=63 format=4 uid="uid://bxafkiyipm3ka"]
 
 [ext_resource type="Script" path="res://scripts/etage.gd" id="1_tkgij"]
 [ext_resource type="Texture2D" uid="uid://g05umu8sho60" path="res://art/Texture/TX Tileset Grass.png" id="2_0ehqc"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://d1a18ympb8jjc" path="res://scenes/Objects/stairs_in.tscn" id="8_e1a81"]
 [ext_resource type="PackedScene" uid="uid://doljwjgsf0bgl" path="res://Collectable/apple.tscn" id="10_r4vep"]
 [ext_resource type="PackedScene" uid="uid://b6ournk0pus1p" path="res://scenes/path.tscn" id="11_24f7q"]
-[ext_resource type="PackedScene" uid="uid://dh4md773tljqe" path="res://scenes/test_change_scene.tscn" id="13_gwxvk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn0dj"]
 texture = ExtResource("2_swl6d")
@@ -5225,7 +5224,3 @@ tile_set = SubResource("TileSet_ijvgo")
 
 [node name="Path" parent="." instance=ExtResource("11_24f7q")]
 position = Vector2(135, 287)
-numberOfLayers = 1
-playerRenderingLayer = 2
-isADoor = true
-targetScene = ExtResource("13_gwxvk")

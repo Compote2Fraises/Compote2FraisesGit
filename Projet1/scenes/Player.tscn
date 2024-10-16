@@ -66,13 +66,14 @@ animation = &"Down"
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 position = Vector2(-0.125, 3.75)
 shape = SubResource("RectangleShape2D_mbhe5")
-debug_color = Color(0.23708, 0.507598, 1, 0.42)
+debug_color = Color(0.16968, 7.04634e-05, 0.58028, 0.42)
 
 [node name="Hurt box area" type="Area2D" parent="."]
 
 [node name="HurtBox" type="CollisionShape2D" parent="Hurt box area"]
 position = Vector2(-0.5, 3.75)
 shape = SubResource("RectangleShape2D_dntp0")
+debug_color = Color(1, 0.498521, 0.823209, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 y_sort_enabled = true

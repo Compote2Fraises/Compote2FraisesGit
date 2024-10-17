@@ -7,3 +7,4 @@
 script = ExtResource("1_s58g6")
 name = "Light"
 texture = ExtResource("2_k8y3x")
+maxAmount = 1

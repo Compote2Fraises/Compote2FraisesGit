@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqdbiw45ug1g1"]
+
+[ext_resource type="PackedScene" uid="uid://mk2dnjqapjgw" path="res://Collectable/collectable.tscn" id="1_gqiax"]
+[ext_resource type="Resource" uid="uid://dorpraagghcdk" path="res://Items/Light.tres" id="2_qw56q"]
+[ext_resource type="Texture2D" uid="uid://twja3dq5dk7l" path="res://art/UI/Items/16x16-RPG-pack_0063_64-lamp.png" id="3_noygb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exl73"]
+resource_local_to_scene = true
+size = Vector2(7, 14)
+
+[node name="Collectable" instance=ExtResource("1_gqiax")]
+texture_filter = 1
+itemRes = ExtResource("2_qw56q")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_exl73")
+
+[node name="Sprite2D" parent="." index="1"]
+texture_filter = 1
+texture = ExtResource("3_noygb")

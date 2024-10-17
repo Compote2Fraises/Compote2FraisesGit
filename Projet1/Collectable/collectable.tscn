@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://mk2dnjqapjgw"]
+[gd_scene load_steps=4 format=3 uid="uid://mk2dnjqapjgw"]
 
 [ext_resource type="Script" path="res://scripts/collectable.gd" id="1_gcecp"]
+[ext_resource type="Resource" uid="uid://6a0amq3wvlfk" path="res://Items/Lifepot.tres" id="2_pawh1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yqu1d"]
 resource_local_to_scene = true
@@ -8,6 +9,7 @@ size = Vector2(12, 11)
 
 [node name="Collectable" type="Area2D"]
 script = ExtResource("1_gcecp")
+itemRes = ExtResource("2_pawh1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yqu1d")

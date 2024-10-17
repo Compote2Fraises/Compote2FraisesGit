@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 GuiInventory="*res://Autoloaders/GUI_Inventory.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
 [input]
 
 MoveUp={
@@ -59,4 +64,5 @@ toggle_inventory={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 2d/snap/snap_2d_transforms_to_pixel=true

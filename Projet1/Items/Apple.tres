@@ -7,3 +7,4 @@
 script = ExtResource("1_51sd6")
 name = "Apple"
 texture = ExtResource("2_t6cm2")
+maxAmount = 10

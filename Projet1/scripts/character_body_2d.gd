@@ -41,5 +41,10 @@ func _process(delta):
 	move_and_slide()
 	
 func _on_hurt_box_area_area_entered(area):
-	if area.has_method("collect"):
-		area.collect()
+	
+	#Detection des collectibles
+	var emptySlots = inventory.slots.filter(func(slot): return slot.item == null) # Tout les slots vides
+	print(emptySlots)
+	if area.has_method("collect"): # Si l'objet est un collectible
+		if  (emptySlots != [] or inventory.slots[-1].amount < area.itemRes.maxAmount): # si il reste des slots vides OU si le dernier slot est incomplet
+			area.collect(inventory)

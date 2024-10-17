@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://xtnvcybx1jgq"]
+
+[ext_resource type="PackedScene" uid="uid://mk2dnjqapjgw" path="res://Collectable/collectable.tscn" id="1_vj6bs"]
+[ext_resource type="Texture2D" uid="uid://2hmrjioyd5qp" path="res://art/UI/Items/16x16-RPG-pack_0000_1-Sword.png" id="2_jjpsh"]
+[ext_resource type="Resource" uid="uid://dpk75jcybjjtt" path="res://Items/Sword.tres" id="2_kpult"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7spyj"]
+resource_local_to_scene = true
+size = Vector2(12, 11)
+
+[node name="Sword" instance=ExtResource("1_vj6bs")]
+itemRes = ExtResource("2_kpult")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_7spyj")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_jjpsh")

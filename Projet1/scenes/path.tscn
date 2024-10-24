@@ -14,5 +14,5 @@ script = ExtResource("1_aql5y")
 shape = SubResource("RectangleShape2D_hh0x1")
 debug_color = Color(0.689974, 0.000284549, 0.669616, 0.42)
 
-[connection signal="body_entered" from="Trigger" to="." method="_on_path_body_entered"]
 [connection signal="body_entered" from="Trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_entered" from="Trigger" to="." method="_on_path_body_entered"]

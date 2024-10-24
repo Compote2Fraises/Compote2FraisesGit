@@ -6,11 +6,7 @@
 
 [node name="Switch Scene" type="Node2D"]
 script = ExtResource("1_7iiao")
-entry_position = null
-zIndex = null
-collisionLayer = null
-collisionMask = null
-speed = null
+collisionLayer = Array[int]([2, 3, 5])
 
 [node name="Trigger" type="Area2D" parent="."]
 

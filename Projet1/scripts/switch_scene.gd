@@ -10,7 +10,8 @@ extends Node2D
 @export var zIndex : int = 0
 @export var collisionLayer : Array[int]		# [1, 2, 4] Collision layer 1, 2 et 4
 @export var collisionMask : Array[int]
-@export var speed : int = -1 # -1 signifie que la vitesse ne change pas
 
 func _on_trigger_body_entered(body: Node2D) -> void:
-	pass
+	if body.name == "Player" and body.z_index == self.z_index:
+		body.queue_free() # Suppression du joueur actuel
+		get_tree().change_scene_to_packed(targetScene) # Changement de scene
